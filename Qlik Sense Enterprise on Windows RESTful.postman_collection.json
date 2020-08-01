@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "8d85e126-9ce7-49c8-af94-1e49f1c4f2fc",
+		"name": "Qlik Sense Enterprise on Windows RESTful",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "QRS - About",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Qlik-Xrfkey",
+						"value": "{{key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Qlik-User",
+						"value": "{{user}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{server}}:4242/qrs/about?Xrfkey={{key}}",
+					"protocol": "https",
+					"host": [
+						"{{server}}"
+					],
+					"port": "4242",
+					"path": [
+						"qrs",
+						"about"
+					],
+					"query": [
+						{
+							"key": "Xrfkey",
+							"value": "{{key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QRS - OpenAPI Spec",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Qlik-Xrfkey",
+						"value": "{{key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Qlik-User",
+						"value": "{{user}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{server}}:4242/qrs/about/openapi/main?Xrfkey={{key}}",
+					"protocol": "https",
+					"host": [
+						"{{server}}"
+					],
+					"port": "4242",
+					"path": [
+						"qrs",
+						"about",
+						"openapi",
+						"main"
+					],
+					"query": [
+						{
+							"key": "Xrfkey",
+							"value": "{{key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QRS - Relations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Qlik-Xrfkey",
+						"value": "{{key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Qlik-User",
+						"value": "{{user}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{server}}:4242/qrs/about/api/relations?Xrfkey={{key}}",
+					"protocol": "https",
+					"host": [
+						"{{server}}"
+					],
+					"port": "4242",
+					"path": [
+						"qrs",
+						"about",
+						"api",
+						"relations"
+					],
+					"query": [
+						{
+							"key": "Xrfkey",
+							"value": "{{key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QRS - All Endpoints",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Qlik-Xrfkey",
+						"value": "{{key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Qlik-User",
+						"value": "{{user}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{server}}:4242/qrs/about/api/description?Xrfkey={{key}}",
+					"protocol": "https",
+					"host": [
+						"{{server}}"
+					],
+					"port": "4242",
+					"path": [
+						"qrs",
+						"about",
+						"api",
+						"description"
+					],
+					"query": [
+						{
+							"key": "Xrfkey",
+							"value": "{{key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QPS - All Endpoints",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Qlik-Xrfkey",
+						"value": "{{key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Qlik-User",
+						"value": "{{user}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{server}}:4243/qps/about/description?Xrfkey={{key}}",
+					"protocol": "https",
+					"host": [
+						"{{server}}"
+					],
+					"port": "4243",
+					"path": [
+						"qps",
+						"about",
+						"description"
+					],
+					"query": [
+						{
+							"key": "Xrfkey",
+							"value": "{{key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QRS - Notification (Create)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Qlik-Xrfkey",
+						"value": "{{key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Qlik-User",
+						"value": "{{user}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"http://localhost:5001/notify\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{server}}:4242/qrs/notification?Xrfkey={{key}}&name=User&changeType=1",
+					"protocol": "https",
+					"host": [
+						"{{server}}"
+					],
+					"port": "4242",
+					"path": [
+						"qrs",
+						"notification"
+					],
+					"query": [
+						{
+							"key": "Xrfkey",
+							"value": "{{key}}"
+						},
+						{
+							"key": "name",
+							"value": "User"
+						},
+						{
+							"key": "changeType",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QRS - External Program Task (Create)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Qlik-Xrfkey",
+						"value": "{{key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Qlik-User",
+						"value": "{{user}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"path\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\",\r\n\t\"parameters\": \" -ExecutionPolicy Bypass C:\\\\scripts\\\\powerShell\\\\example.ps1\",\r\n\t\"name\": \"ExampleTask-ExternalProgramTask\",\r\n\t\"taskType\": 1,\r\n\t\"enabled\": true,\r\n\t\"taskSessionTimeout\": 1440,\r\n\t\"maxRetries\": 0,\r\n\t\"schemaPath\": \"ExternalProgramTask\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{server}}:4242/qrs/externalprogramtask?Xrfkey={{key}}",
+					"protocol": "https",
+					"host": [
+						"{{server}}"
+					],
+					"port": "4242",
+					"path": [
+						"qrs",
+						"externalprogramtask"
+					],
+					"query": [
+						{
+							"key": "Xrfkey",
+							"value": "{{key}}"
+						},
+						{
+							"key": "name",
+							"value": "User",
+							"disabled": true
+						},
+						{
+							"key": "changeType",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "e038c0b6-b364-4867-b29b-69dab8b8929f",
+			"key": "server",
+			"value": "QMI-QS-e80c"
+		},
+		{
+			"id": "4495418e-b499-49b9-94ee-51224d04c889",
+			"key": "key",
+			"value": "1234567890123456"
+		},
+		{
+			"id": "c504e60b-67f8-4b64-b0ee-8f6c4175bf45",
+			"key": "user",
+			"value": "UserDirectory=INTERNAL; UserId=sa_api"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
